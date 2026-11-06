@@ -1,0 +1,17 @@
+{
+  "name": "btc-accord-educational-prototype",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local-only educational milestone escrow. Never use with real funds.",
+  "scripts": {
+    "test": "node --test --test-concurrency=1 test/escrow.test.cjs",
+    "compile": "node scripts/compile.cjs",
+    "demo": "node scripts/demo.cjs",
+    "node": "node scripts/local-node.cjs"
+  },
+  "devDependencies": {
+    "ethers": "6.15.0",
+    "hardhat": "2.26.3",
+    "solc": "0.8.28"
+  }
+}
