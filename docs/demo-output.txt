@@ -1,0 +1,10 @@
+EDUCATIONAL LOCAL DEMO. No real funds or private keys.
+Chain ID: 31337
+Deployed MilestoneEscrow: 0x5FbDB2315678afecb367f032d93F642f64180aa3
+createDeal | gas used: 225306
+submitDelivery | gas used: 32150
+accept | gas used: 82276
+Provider credit: 1.0 test units
+withdraw | gas used: 49924
+Contract balance: 0.0 test units
+Normal path complete. Run npm test to show the tests.

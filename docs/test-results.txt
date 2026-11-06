@@ -1,0 +1,24 @@
+✔ 01 creates a funded deal with fixed roles and terms (608.984209ms)
+✔ 02 rejects zero value, duplicate roles, missing terms and past deadline (206.217125ms)
+✔ 03 only provider can submit delivery (204.162834ms)
+✔ 04 rejects acceptance before delivery and by unauthorized signer (201.851208ms)
+✔ 05 normal flow allocates exactly once and withdrawal empties credit (218.253625ms)
+✔ 06 either party can dispute; outsiders cannot (203.913333ms)
+✔ 07 disputed deal blocks normal acceptance (201.827834ms)
+✔ 08 only fixed arbitrator resolves and cannot overallocate (210.3405ms)
+✔ 09 expiry requests arbitration instead of automatic refund (198.918417ms)
+✔ 10 late delivery is rejected (191.070459ms)
+✔ 11 two deals preserve locked plus credited balances (223.930709ms)
+✔ 12 rejects repeated and unauthorized withdrawals (217.780375ms)
+✔ 13 malicious recipient cannot withdraw twice by reentering (415.859875ms)
+✔ 14 rejecting recipient keeps credit without blocking another deal (401.098667ms)
+✔ 15 nonexistent deal cannot be advanced (186.086958ms)
+✔ 16 rejects zero-address provider or arbitrator (191.95625ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4476.947417

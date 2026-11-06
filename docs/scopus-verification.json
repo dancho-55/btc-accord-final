@@ -1,0 +1,36 @@
+{
+  "source": "Elsevier Scopus source title list September 2026",
+  "retrieved": "2026-11-06",
+  "journals": [
+    {
+      "id": 23038,
+      "journal": "ACM Computing Surveys",
+      "status": "Active",
+      "coverage": "1969-2026"
+    },
+    {
+      "id": 21100829268,
+      "journal": "Applied Sciences (Switzerland)",
+      "status": "Active",
+      "coverage": "2011-2026"
+    },
+    {
+      "id": 12264,
+      "journal": "Future Generation Computer Systems",
+      "status": "Active",
+      "coverage": "1984-2027"
+    },
+    {
+      "id": 5300152202,
+      "journal": "IET Communications",
+      "status": "Active",
+      "coverage": "2007-2026"
+    },
+    {
+      "id": 18732,
+      "journal": "Information and Software Technology",
+      "status": "Active",
+      "coverage": "1987-2026; 1970"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+sequenceDiagram
+    participant C as Customer
+    participant P as Provider
+    participant E as MilestoneEscrow
+    participant A as Arbitrator
+    C->>E: createDeal(provider, arbitrator, deadline, termsHash) + test funds
+    P->>E: submitDelivery(id)
+    C->>E: accept(id)
+    Note over E: Resolved; provider credit allocated
+    P->>E: withdraw()
+    E-->>P: Local test payment
+    Note over C,A: Alternative path while Funded or Submitted
+    C->>E: openDispute(id) or requestResolution(id) after expiry
+    A->>E: resolve(id, customerAmount)
+    Note over E: Customer and provider credits allocated

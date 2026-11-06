@@ -1,0 +1,12 @@
+{
+  "network": "Hardhat in-process, chainId 31337",
+  "compiler": "solc 0.8.28, Paris EVM, optimizer 200",
+  "gas": {
+    "createDeal": 225306,
+    "submitDelivery": 32150,
+    "accept": 82276,
+    "withdraw": 49924
+  },
+  "totalGas": 389656,
+  "note": "Gas units are local measurements, not Rootstock KZT prices."
+}
