@@ -56,4 +56,4 @@ From the prototype folder, run `node scripts/finance.cjs`. It independently rege
 
 ## Balanced team review
 
-Each student has nine report pages and six slides. Bagdaulet reviews funding and delivery (tests 01–05); Amirlan reviews disputes and allocation (tests 06–11); Daryn reviews withdrawals and attack tests (12–16) and reproduces finance. These are proposed review tasks, not claimed completed contributions. See docs/review-allocation.txt. The initial commit is authored by Codex; students should make their own genuine reviewed changes from their own accounts.
+Each student has nine report pages and six slides. Bagdaulet reviews funding and delivery (tests 01–05); Amirlan reviews disputes and allocation (tests 06–11); Daryn reviews withdrawals and attack tests (12–16) and reproduces finance. These are proposed review tasks, not claimed completed contributions. See docs/review-allocation.txt. The code was prepared with Codex assistance and uploaded through the team account. Students should make their own genuine reviewed changes from their own accounts.
