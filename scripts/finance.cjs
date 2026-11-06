@@ -1,0 +1,9 @@
+const fs=require('node:fs');const assert=require('node:assert/strict');
+function scenario(name,mult=1,costmult=1,gas=100){const customers=[20,45,80].map(x=>x*mult);const revenue=customers.map(x=>x*.72);const variable=customers.map(x=>x*(20*4*gas+4000)*12/1e6*costmult);const fixed=[18,24,30].map(x=>x*costmult);const pretax=revenue.map((x,i)=>x-variable[i]-fixed[i]);const tax=pretax.map(x=>Math.max(x,0)*.2);const flow=pretax.map((x,i)=>x-tax[i]);const cumulative=[-18];flow.forEach(x=>cumulative.push(cumulative.at(-1)+x));return {name,customers,revenue,variable,fixed,pretax,tax,flow,cumulative,npv:-18+flow.reduce((s,x,i)=>s+x/1.25**(i+1),0),funding:-Math.min(...cumulative)+1,closing_cash:cumulative.map(x=>26+x),payback:'Beyond Year 3'};}
+const scenarios=[scenario('Base'),scenario('25% fewer customers',.75),scenario('20% higher operating costs',1,1.2),scenario('Execution allowance triples',1,1,300)];
+const exit=[2,3,4].map(revenue_multiple=>{const equity_value=160*.72*revenue_multiple;const investor_proceeds=equity_value*.25;return {revenue_multiple,equity_value,investor_proceeds,moic:investor_proceeds/26,annualized_return:(investor_proceeds/26)**.2-1};});
+const result={units:'KZT million unless stated',initial:18,funding:26,discount_rate:.25,tax_rate_assumption:.2,scenarios,exit};
+const expected=JSON.parse(fs.readFileSync('docs/financial_model.json','utf8'));
+function compare(a,b,p=''){if(typeof a==='number'){assert.ok(Math.abs(a-b)<1e-9,p+' differs');return;}if(a&&typeof a==='object'){for(const k of Object.keys(a))compare(a[k],b[k],p+'.'+k);return;}assert.equal(a,b,p);}
+compare(result,expected);console.log('All scenario, tax, funding, NPV and exit figures match the documented model.');
+for(const s of scenarios)console.log(s.name+': NPV '+s.npv.toFixed(6)+'m; required funding '+s.funding.toFixed(3)+'m; '+s.payback);
